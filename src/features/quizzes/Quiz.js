@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { selectQuizzes } from "./quizzesSlice";
 
 export default function Topic() {
-  const quizzes = {};
+  const quizzes = useSelector(selectQuizzes);
   let { quizId } = useParams();
   const quiz = quizzes[quizId];
 
